@@ -856,7 +856,7 @@ class ThingsBoardSized
       //       https://github.com/thingsboard/thingsboard-arduino-sdk/issues/86#issuecomment-1312064199
       if (m_fwChecksum != nullptr) {
         // strcpy(_md5SumTmp, m_fwChecksum);
-        strlcpy(_md5SumTmp, m_fwChecksum);
+        strlcpy(_md5SumTmp, m_fwChecksum, sizeof(_md5SumTmp));
       }
 
       // Update state
